@@ -1,0 +1,13 @@
+<div ng-include="'components/navbar-admin/navbar-admin.html'"></div>
+
+<div class="container">
+  <ul>
+    <li class="list-group-item" ng-repeat="booster in boosters">
+      name: {{booster.name}} <a ng-click="deleteBooster(booster)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+    </li>
+  </ul>
+  <label>Name for a new Booster</label>
+  <input ng-model="name" type="text"/>
+  <button ng-click="createBooster()">Create a Booster!</button>
+
+</div>
