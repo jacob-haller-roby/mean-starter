@@ -1,3 +1,4 @@
+/*globals jwplayer*/
 'use strict';
 
 angular.module('extendmedBoilerplate')
@@ -11,7 +12,7 @@ angular.module('extendmedBoilerplate')
         width: '100%',
         aspectratio: '16:10',
         skin: 'bekle',
-        image: "assets/images/alas-logo.png"});
+        image: 'assets/images/alas-logo.png'});
     };
 
     $scope.$on('$viewContentLoaded', function(){

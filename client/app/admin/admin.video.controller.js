@@ -8,6 +8,6 @@ angular.module('extendmedBoilerplate')
     $scope.update = function(){
       Video.update($scope.video);
       $location.path('admin/videos');
-    }
+    };
 
   });

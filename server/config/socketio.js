@@ -19,10 +19,6 @@ function onConnect(socket) {
 
   // Insert sockets below
   require('../api/video/video.socket').register(socket);
-  require('../api/booster/booster.socket').register(socket);
-  require('../api/eventType/eventType.socket').register(socket);
-  require('../api/event/event.socket').register(socket);
-  require('../api/thing/thing.socket').register(socket);
 }
 
 module.exports = function (socketio) {

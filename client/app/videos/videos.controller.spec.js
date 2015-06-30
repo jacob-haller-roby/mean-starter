@@ -4,6 +4,7 @@ describe('Controller: VideosCtrl', function () {
 
   // load the controller's module
   beforeEach(module('extendmedBoilerplate'));
+  beforeEach(module('socketMock'));
 
   var VideosCtrl, scope;
 
