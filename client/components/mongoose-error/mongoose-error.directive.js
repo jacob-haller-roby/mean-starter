@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('mtgoroiApp')
+angular.module('extendmedBoilerplate')
   .directive('mongooseError', function () {
     return {
       restrict: 'A',

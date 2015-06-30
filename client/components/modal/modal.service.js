@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mtgoroiApp')
+angular.module('extendmedBoilerplate')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

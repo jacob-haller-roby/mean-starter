@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mtgoroiApp')
+angular.module('extendmedBoilerplate')
   .controller('SettingsCtrl', function ($scope, User, Auth) {
     $scope.errors = {};
 

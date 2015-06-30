@@ -1,5 +1,3 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -10,11 +8,11 @@
 
         <div class="form-group">
           <label>Current Password</label>
-
           <input type="password" name="password" class="form-control" ng-model="user.oldPassword"
                  mongoose-error/>
+
           <p class="help-block" ng-show="form.password.$error.mongoose">
-              {{ errors.other }}
+            {{ errors.other }}
           </p>
         </div>
 
@@ -24,6 +22,7 @@
           <input type="password" name="newPassword" class="form-control" ng-model="user.newPassword"
                  ng-minlength="3"
                  required/>
+
           <p class="help-block"
              ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
             Password must be at least 3 characters.

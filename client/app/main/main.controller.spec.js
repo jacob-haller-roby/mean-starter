@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('mtgoroiApp'));
+  beforeEach(module('extendmedBoilerplate'));
   beforeEach(module('socketMock'));
 
   var MainCtrl,

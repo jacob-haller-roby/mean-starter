@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mtgoroiApp')
+angular.module('extendmedBoilerplate')
   .controller('MainCtrl', function ($scope, $http, socket) {
     $scope.awesomeThings = [];
 

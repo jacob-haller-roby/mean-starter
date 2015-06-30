@@ -1,16 +1,16 @@
 'use strict';
 
-angular.module('mtgoroiApp')
+angular.module('extendmedBoilerplate')
   .controller('NavbarAdminCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
     }, {
       'title': 'Users',
-      'link': '/admin'
+      'link': '/admin/users'
     }, {
-      'title': 'Boosters',
-      'link': '/admin/boosters'
+      'title': 'Videos',
+      'link': '/admin/videos'
     }];
 
     $scope.isCollapsed = true;
