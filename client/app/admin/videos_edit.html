@@ -1,0 +1,25 @@
+<input type="hidden" ng-model="video._id" value="{{video._id}}"/>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 text-right">
+      <label>Title: </label>
+    </div>
+    <div class="col-sm-9">
+      <input type="text" ng-model="video.title" name="title" value="{{video.title}}"/></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3 text-right">
+      <label>Stream Url: </label></div>
+    <div class="col-sm-9"><input type="text" ng-model="video.streamUrl" name="streamUrl"
+                                 value="{{video.streamUrl}}"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <button type="submit" ng-click="update()" class="btn btn-primary">Submit</button>
+      <a ui-sref="admin.videos" class="btn btn-default" role="button">Cancel</a>
+    </div>
+  </div>
+</div>
+

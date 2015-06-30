@@ -22,8 +22,8 @@ angular.module('extendmedBoilerplate')
 
     $scope.create = function () {
       Video.create($scope.video);
-      $scope.video = "";
-      $location.path("/admin/videos");
+      $scope.video = '';
+      $location.path('/admin/videos');
 
     };
 

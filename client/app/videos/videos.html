@@ -1,0 +1,30 @@
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-md-12" id="jw-container">-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<script src="components/jwplayer.js"></script>-->
+<!--<script type="text/javascript">jwplayer('jw-container').setup({-->
+<!--file: 'http://origin-streaming.extendmed.com/alashemostasis/Maria_Tovar_ES.mp4', width: '100%',-->
+<!--aspectratio: '16:10',-->
+<!--skin: 'bekle',-->
+<!--image: "assets/images/alas-logo.png"-->
+<!--})</script>-->
+<div ui-view>
+  <div class="container">
+    <ul>
+      <li class="list-group-item" ng-repeat="video in videos">
+        <div class="row">
+          <div class="col-sm-10 btn-neighbor">
+            name: {{video.title}}
+          </div>
+          <div class="col-sm-2"><a ui-sref="main.videos.watch({id:video._id})"
+                                   class="btn btn-default pull-right">watch</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
