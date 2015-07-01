@@ -1,13 +1,16 @@
 'use strict';
 
 angular.module('extendmedBoilerplate')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+  .controller('NavbarCtrl', function ($scope, $location, Auth, LanguageBox) {
+
+    angular.extend(this, new LanguageBox.mixin($scope, Auth, LanguageBox, 'navbar'));
+
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    },{
+    }, {
       'title': 'Videos',
-      'link':'/videos'
+      'link': '/videos'
     }];
 
     $scope.isCollapsed = true;
@@ -16,12 +19,12 @@ angular.module('extendmedBoilerplate')
     $scope.getCurrentUser = Auth.getCurrentUser;
     $scope.getLanguage = Auth.getLanguage;
 
-    $scope.logout = function() {
+    $scope.logout = function () {
       Auth.logout();
       $location.path('/login');
     };
 
-    $scope.isActive = function(route) {
+    $scope.isActive = function (route) {
       return route === $location.path();
     };
   });

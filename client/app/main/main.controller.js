@@ -2,5 +2,4 @@
 
 angular.module('extendmedBoilerplate')
   .controller('MainCtrl', function () {
-
   });
