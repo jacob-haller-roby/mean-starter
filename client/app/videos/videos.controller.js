@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('extendmedBoilerplate')
-  .controller('VideosCtrl', function ($scope, Video, Auth) {
+  .controller('VideosCtrl', function ($scope, Video, Auth, $location) {
 
 
     Video.getAll().success(function (val) {
@@ -20,11 +20,13 @@ angular.module('extendmedBoilerplate')
     };
 
     $scope.$on('$viewContentLoaded', function(){
-      Video.getFeatured(Auth.getLanguage(), 'TopFeature').success(function (data) {
-          $scope.loadVideo(data.streamUrl);
-          $scope.topFeatureVideo = data;
-        }
-      );
+      if($location.path() === "/videos") {
+        Video.getFeatured(Auth.getLanguage(), 'TopFeature').success(function (data) {
+            $scope.loadVideo(data.streamUrl);
+            $scope.topFeatureVideo = data;
+          }
+        );
+      }
     });
 
 
