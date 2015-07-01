@@ -18,14 +18,14 @@ angular.module('extendmedBoilerplate')
         image: 'assets/images/alas-logo.png'
       });
     };
-    Video.getFeatured(Auth.getLanguage(), 'TopFeature').success(function (data) {
-        $scope.loadVideo(data.streamUrl);
-        $scope.topFeatureVideo = data;
-      }
-    );
-    //$scope.$on('$viewContentLoaded', function(){
-    //  $scope.loadVideo();
-    //});
+
+    $scope.$on('$viewContentLoaded', function(){
+      Video.getFeatured(Auth.getLanguage(), 'TopFeature').success(function (data) {
+          $scope.loadVideo(data.streamUrl);
+          $scope.topFeatureVideo = data;
+        }
+      );
+    });
 
 
   });
