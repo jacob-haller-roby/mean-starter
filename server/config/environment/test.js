@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/mtgoroi-test'
+    uri: 'mongodb://localhost/extendmedBoilerplate-test'
   }
 };

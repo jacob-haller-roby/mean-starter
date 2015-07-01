@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/mtgoroi-dev'
+    uri: 'mongodb://localhost/extendmedBoilerplate-dev'
   },
 
   seedDB: true
