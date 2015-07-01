@@ -20,6 +20,15 @@ exports.show = function(req, res) {
   });
 };
 
+//Get a video by Feature Field
+exports.featured = function(req, res){
+  var queryParams = {};
+  queryParams['featured.' + req.params.language] = req.params.code;
+  Video.findOne(queryParams, function (err, video){
+    return res.json(video);
+  });
+};
+
 // Creates a new video in the DB.
 exports.create = function(req, res) {
   Video.create(req.body, function(err, video) {

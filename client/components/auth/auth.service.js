@@ -101,6 +101,10 @@ angular.module('extendmedBoilerplate')
         return currentUser;
       },
 
+      getLanguage: function(){
+        return currentUser.language;
+      },
+
       /**
        * Check if a user is logged in
        *

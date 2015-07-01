@@ -7,7 +7,11 @@ var VideoSchema = new Schema({
   title: String,
   streamUrl: String,
   photoUrl: String,
-  presenterName: String
+  presenterName: String,
+  featured: {
+    english: String,
+    french: String
+  }
 
 });
 

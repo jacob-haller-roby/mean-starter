@@ -6,7 +6,7 @@
         <div class="col-sm-10 btn-neighbor">
           name: {{video.title}}
         </div>
-        <div class="col-sm-1"><a ui-sref="admin.videos.edit({id:video._id})" class="btn btn-default pull-right">edit</a>
+        <div class="col-sm-1"><a ui-sref="main.adminvideos.edit({id:video._id})" class="btn btn-default pull-right">edit</a>
         </div>
         <div class="col-sm-1"><a
           ng-click="deleteById(video)" class="trash"><span
@@ -15,7 +15,7 @@
       </li>
     </ul>
 
-    <a ui-sref="admin.videos.new" class="btn btn-default" role="button">Make a New Video</a>
+    <a ui-sref="main.adminvideos.new" class="btn btn-default" role="button">Make a New Video</a>
 
   </div>
 </div>

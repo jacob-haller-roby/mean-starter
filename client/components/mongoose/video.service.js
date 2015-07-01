@@ -31,6 +31,15 @@ angular.module('extendmedBoilerplate')
     video.deleteById = function (id) {
       $http.delete('/api/videos/' + id);
     };
+
+    video.getFeatured = function (language, code) {
+      console.log('hit the service');
+      return $http.get('/api/videos/featured/' + language + '/' + code).success(function (data) {
+        return data;
+      });
+    };
+
+
     return video;
   });
 

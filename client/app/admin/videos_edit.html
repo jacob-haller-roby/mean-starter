@@ -15,10 +15,21 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-sm-3 text-right">
+      <label>Featured: </label></div>
+    <div class="col-sm-9">
+      <select ng-model="featureCode">
+        <option ng-repeat="feature in features" value="{{feature.code}}">
+          {{feature.name}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
       <button type="submit" ng-click="update()" class="btn btn-primary">Submit</button>
-      <a ui-sref="admin.videos" class="btn btn-default" role="button">Cancel</a>
+      <a ui-sref="main.adminvideos" class="btn btn-default" role="button">Cancel</a>
     </div>
   </div>
 </div>

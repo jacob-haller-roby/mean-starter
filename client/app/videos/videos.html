@@ -14,17 +14,25 @@
 <!--})</script>-->
 <div ui-view>
   <div class="container">
-    <ul>
-      <li class="list-group-item" ng-repeat="video in videos">
-        <div class="row">
-          <div class="col-sm-10 btn-neighbor">
-            name: {{video.title}}
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+        <div id="jw-container"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul>
+        <li class="list-group-item" ng-repeat="video in videos">
+          <div class="row">
+            <div class="col-sm-10 btn-neighbor">
+              name: {{video.title}}
+            </div>
+            <div class="col-sm-2"><a ui-sref="main.videos.watch({id:video._id})"
+                                     class="btn btn-default pull-right">watch</a>
+            </div>
           </div>
-          <div class="col-sm-2"><a ui-sref="main.videos.watch({id:video._id})"
-                                   class="btn btn-default pull-right">watch</a>
-          </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
