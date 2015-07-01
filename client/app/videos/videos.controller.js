@@ -20,7 +20,7 @@ angular.module('extendmedBoilerplate')
     };
 
     $scope.$on('$viewContentLoaded', function(){
-      if($location.path() === "/videos") {
+      if($location.path() === '/videos') {
         Video.getFeatured(Auth.getLanguage(), 'TopFeature').success(function (data) {
             $scope.loadVideo(data.streamUrl);
             $scope.topFeatureVideo = data;
